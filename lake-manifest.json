@@ -1,0 +1,9 @@
+{"version": 4,
+ "packagesDir": "lake-packages",
+ "packages":
+ [{"git":
+   {"url": "https://github.com/gebner/quote4",
+    "subDir?": null,
+    "rev": "c71f94e34c1cda52eef5c93dc9da409ab2727420",
+    "name": "Qq",
+    "inputRev?": "master"}}]}
