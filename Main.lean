@@ -17,4 +17,4 @@ def main (args : List String) : IO Unit := do
     let env ← importModules (mods.map ({ module := · })) opts
     let ctx : Core.Context := { fileName := "<input>", fileMap := ⟨"", #[0], #[1]⟩ }
     discard <| Core.CoreM.toIO (ctx := ctx) (s := { env }) <| Meta.MetaM.run do
-      (lookup.reprCore root (.other q(ModuleData) 0)).run
+      lookup.main root

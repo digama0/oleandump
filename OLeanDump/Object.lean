@@ -4,6 +4,7 @@ import OLeanDump.ByteArrayParser
 
 open Std Lean Meta ByteArrayParser Qq
 abbrev RefMap (α) := Lean.HashMap UInt64 α
+abbrev RefSet := Lean.HashSet UInt64
 
 inductive ObjPtr
   | scalar (n : Nat)
@@ -185,21 +186,32 @@ partial def findAttrs (c : Name) (ls : List Level) (args : Array Expr) : MetaM U
 
 end
 
+variable (keep : UInt64 → Bool) in
+partial def mark : ObjPtr → StateM (RefSet × Nat) Unit
+  | .scalar _ => pure ()
+  | .ptr ptr => do
+    unless keep ptr do return
+    if (← get).1.contains ptr then return
+    let (o, sz) := self.find! ptr
+    modify fun s => (s.1.insert ptr, s.2 + sz)
+    match o with
+    | .ctor _ fs _
+    | .array fs => fs.forM mark
+    | .thunk p
+    | .task p
+    | .ref p => mark p
+    | .sarray _
+    | .string _
+    | .mpz _ => pure ()
+
 structure ReprState where
   attrs : NameMap (Expr × Expr × Expr)
   layoutCache : NameMap Layout := {}
+  theoremVals : RefSet := {}
   ids : RefMap Parse := {}
   size : Nat := 0
 
 abbrev ReprM := StateRefT ReprState MetaM
-
-def ReprM.run (m : ReprM Format) : MetaM Unit := do
-  let attrs ← IO.mkRef {}
-  for attr in [builtinInitAttr, regularInitAttr] do
-    for entries in attr.ext.toEnvExtension.getState (← getEnv) |>.importedEntries do
-      for (n, initFn) in entries do
-        findAttrs attrs (if initFn.isAnonymous then n else initFn) [] #[]
-  StateRefT'.run' (s := { attrs := ← attrs.get }) do IO.println <| ← m
 
 def getLayoutCache (n : Name) : ReprM Layout := do
   match (← get).layoutCache.find? n with
@@ -260,6 +272,10 @@ partial def parse (ptr : ObjPtr) (layout : LayoutVal := .unknown 0) : ReprM Pars
         match res with
         | some (n, params, .ctor scalars ptrs fields') =>
           let mut out : Array Parse := #[]
+          if n == ``TheoremVal.mk then
+            if let some (LayoutVal.other _ i) := fields'[1]? then
+              if let .ptr p := fields[i]! then
+                modify fun s => { s with theoremVals := s.theoremVals.insert p }
           for l in fields' do
             let runP p off k := do
               match ByteArrayParser.run' p sfields off with
@@ -328,3 +344,14 @@ partial def parse (ptr : ObjPtr) (layout : LayoutVal := .unknown 0) : ReprM Pars
     return result
 
 end
+
+def main (root : ObjPtr) : MetaM Unit := do
+  let attrs ← IO.mkRef {}
+  for attr in [builtinInitAttr, regularInitAttr] do
+    for entries in attr.ext.toEnvExtension.getState (← getEnv) |>.importedEntries do
+      for (n, initFn) in entries do
+        findAttrs attrs (if initFn.isAnonymous then n else initFn) [] #[]
+  let (_, s) ← StateRefT'.run (s := { attrs := ← attrs.get }) do
+    IO.println <| ← self.reprCore root (.other q(ModuleData) 0)
+  let (_, _, sz) := self.mark (!s.theoremVals.contains ·) root |>.run ({}, 0)
+  IO.println s!"size without theorems: {sz}"
