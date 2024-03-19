@@ -138,14 +138,14 @@ inductive Parse where
   | str (s : String)
   | name (f : Name)
   | emptyArr
-  | other (f : Format)
+  | other (f : Format) (diff : Nat := 0)
   deriving Inhabited
 
 def Parse.toFormat : Parse → Format
   | .str n => repr n
   | .name n => repr n
   | emptyArr => "#[]"
-  | .other f => f
+  | .other f _ => f
 
 unsafe def evalNameUnsafe (e : Expr) : MetaM Name := evalExpr' Name ``Name e .unsafe
 @[implemented_by evalNameUnsafe] opaque evalName (e : Expr) : MetaM Name
@@ -205,6 +205,7 @@ partial def mark : ObjPtr → StateM (RefSet × Nat) Unit
     | .mpz _ => pure ()
 
 structure ReprState where
+  base : UInt64
   attrs : NameMap (Expr × Expr × Expr)
   layoutCache : NameMap Layout := {}
   theoremVals : RefSet := {}
@@ -266,8 +267,8 @@ partial def parse (ptr : ObjPtr) (layout : LayoutVal := .unknown 0) : ReprM Pars
               throwError "not inductive: {c}"
           let some n := iv.ctors.get? idx | throwError "not inductive: {iv.name}.{idx}"
           pure (some (n, params, ← getLayoutCache n))
-        catch e =>
-          println! "{← e.toMessageData.toString}"
+        catch _e =>
+          -- println! "{← e.toMessageData.toString}"
           pure none
         match res with
         | some (n, params, .ctor scalars ptrs fields') =>
@@ -309,7 +310,7 @@ partial def parse (ptr : ObjPtr) (layout : LayoutVal := .unknown 0) : ReprM Pars
                 return .name (n.str s)
             pure <| .other f!"{n}{Format.line}{out.map Parse.toFormat}")
           match r with
-          | Parse.other msg =>
+          | Parse.other msg _ =>
             let mut msg := msg
             if ptrs < fields.size || scalars.align8 < sfields.size then
               msg := f!"{msg} ??? {← fields.mapM reprCore}[{ptrs}:] {sfields.1}[{scalars}:]"
@@ -336,8 +337,8 @@ partial def parse (ptr : ObjPtr) (layout : LayoutVal := .unknown 0) : ReprM Pars
     let res := res.fill.nest 2
     modify fun st => { st with size := st.size + sz }
     let diff := (← get).size - start
-    let newDeclId := s!"x{String.mk (Nat.toDigits 16 ((hash (toString res)).toNat % 2^32))}\{{diff}}"
-    let result := parsed.getD (.other newDeclId)
+    let newDeclId := s!"x{String.mk (Nat.toDigits 16 ((ptr - (← get).base).toNat % 2^32))}\{{diff}}"
+    let result := parsed.getD (.other newDeclId diff)
     modify fun st => { st with ids := st.ids.insert ptr result }
     if parsed.isNone then
       IO.println f!"let {newDeclId} : {layout.repr} :={Format.line}{res}".group
@@ -345,13 +346,14 @@ partial def parse (ptr : ObjPtr) (layout : LayoutVal := .unknown 0) : ReprM Pars
 
 end
 
-def main (root : ObjPtr) : MetaM Unit := do
+def main (base : UInt64) (root : ObjPtr) : MetaM Unit := do
   let attrs ← IO.mkRef {}
   for attr in [builtinInitAttr, regularInitAttr] do
     for entries in attr.ext.toEnvExtension.getState (← getEnv) |>.importedEntries do
       for (n, initFn) in entries do
         findAttrs attrs (if initFn.isAnonymous then n else initFn) [] #[]
-  let (_, s) ← StateRefT'.run (s := { attrs := ← attrs.get }) do
-    IO.println <| ← self.reprCore root (.other q(ModuleData) 0)
+  let (_, s) ← StateRefT'.run (s := { base, attrs := ← attrs.get }) do
+    let .other p _ ← self.parse root (.other q(ModuleData) 0) | throwError ""
+    IO.println p
   let (_, _, sz) := self.mark (!s.theoremVals.contains ·) root |>.run ({}, 0)
   IO.println s!"size without theorems: {sz}"

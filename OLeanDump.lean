@@ -93,9 +93,18 @@ def parseObj : ByteArrayParser Obj := do
     -- dbg_trace s!"obj {cs_sz} {ctor} {numFields} {lenSFields} {other} {tag}"
     pure <| Obj.ctor ctor.toNat fields sfields
 
-def parseOLean : ByteArrayParser (ObjLookup × ObjPtr) := do
+structure OLeanFile where
+  githash : String
+  base : UInt64
+  objs : ObjLookup
+  root : ObjPtr
+
+def parseOLean : ByteArrayParser OLeanFile := do
   let pos0 ← get
-  expectBs "oleanfile!!!!!!!".toUTF8
+  expectBs "olean".toUTF8
+  expectB 1 -- v1 olean
+  let githash := String.mk <| (← readBytes 40).toList.takeWhile (· ≠ 0) |>.map (Char.ofNat ·.toNat)
+  expectBs [0, 0].toByteArray -- reserved
   let base ← read64LE
   let mut objs : ObjLookup := {}
   let root ← read64LE
@@ -105,7 +114,7 @@ def parseOLean : ByteArrayParser (ObjLookup × ObjPtr) := do
     let obj ← parseObj
     modify (·.align8)
     objs := objs.insert (base + (pos - pos0).toUInt64) (obj, (← get) - pos)
-  pure (objs, .ptr root)
+  pure { githash, base, objs, root := .ptr root }
 
 open Process
 
