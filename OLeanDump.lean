@@ -46,7 +46,7 @@ def parseObj : ByteArrayParser Obj := do
       panic! s!"string has different capacity={capacity} than size={size}"
     let utf8 ← readBytes size.toNat
     let utf8 := utf8.extract 0 (utf8.size - 1) -- drop zero terminator
-    pure <| Obj.string <| String.fromUTF8Unchecked utf8 -- TODO
+    pure <| Obj.string <| String.fromUTF8! utf8 -- TODO
   | 250 =>
     let capacity ← read32LE
     let signSize ← read32LE
