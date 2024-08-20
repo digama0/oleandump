@@ -1,4 +1,4 @@
-githash = a5bc9013ab13f7b186cf154d396036b1d7c23370
+githash = c375e19f6b656fcd594cdca3a38b8578634df8cd
 let x88{96} : Lean.Import := Lean.Import.mk #[`Init, Bool.false]
 let xa0{128} : Array.{0} Lean.Import := array 1 #[x88{96}]
 let x870{2208} : Array.{0} Lean.Name :=
@@ -394,11 +394,11 @@ let x4290{480} : Lean.ConstantVal := Lean.ConstantVal.mk #[`Tree.branch.injEq, L
 let x4300{112} : Lean.Expr := Lean.Expr.const #[`Eq.propIntro, List.nil]
 let x4320{144} : Lean.Expr := Lean.Expr.app #[x4300{112}, x4110{64}]
 let x4340{176} : Lean.Expr := Lean.Expr.app #[x4320{144}, x4190{96}]
-let x4410{208} : Lean.Name := Lean.Name.num #[`a.«_@».Init.Core, 10276]
+let x4410{208} : Lean.Name := Lean.Name.num #[`a.«_@».Init.Core, 12530]
 let x4458{280} : Lean.Name := Lean.Name.str #[x4410{208}, "test"]
 let x44a0{352} : Lean.Name := Lean.Name.str #[x4458{280}, "basic"]
 let x44e8{424} : Lean.Name := Lean.Name.str #[x44a0{352}, "_hyg"]
-let x4508{456} : Lean.Name := Lean.Name.num #[x44e8{424}, 14]
+let x4508{456} : Lean.Name := Lean.Name.num #[x44e8{424}, 16]
 let x4528{32} : Lean.Expr := Lean.Expr.const #[`Tree.noConfusion, x2218{24}]
 let x4548{32} : Lean.Expr := Lean.Expr.app #[xe00{184}, x11e8{24}]
 let x4568{64} : Lean.Expr := Lean.Expr.app #[x4548{32}, xee8{24}]
@@ -412,8 +412,8 @@ let x4648{32} : Lean.Expr := Lean.Expr.app #[xa30{32}, xee8{24}]
 let x4668{64} : Lean.Expr := Lean.Expr.app #[x4648{32}, xe20{24}]
 let x4688{384} : Lean.Expr := Lean.Expr.app #[x4628{288}, x4668{64}]
 let x46a8{416} : Lean.Expr := Lean.Expr.app #[x4688{384}, xab0{24}]
-let x4748{160} : Lean.Name := Lean.Name.num #[`s_eq._@.test.basic._hyg, 16]
-let x4768{32} : Lean.Name := Lean.Name.num #[`s_eq._@.test.basic._hyg, 17]
+let x4748{160} : Lean.Name := Lean.Name.num #[`s_eq._@.test.basic._hyg, 18]
+let x4768{32} : Lean.Name := Lean.Name.num #[`s_eq._@.test.basic._hyg, 19]
 let x4788{32} : Lean.Expr := Lean.Expr.app #[xe00{184}, x1cb8{24}]
 let x47a8{64} : Lean.Expr := Lean.Expr.app #[x4788{32}, x11e8{24}]
 let x47c8{96} : Lean.Expr := Lean.Expr.app #[x23a8{104}, x47a8{64}]
@@ -427,11 +427,11 @@ let x48b8{544} : Lean.Expr := Lean.Expr.lam #[x4748{160}, x4568{64}, x4888{336},
 let x48e8{992} : Lean.Expr := Lean.Expr.app #[x46a8{416}, x48b8{544}]
 let x4908{1496} : Lean.Expr := Lean.Expr.lam #[x4508{456}, x4110{64}, x48e8{992}, Lean.BinderInfo.default]
 let x4938{1704} : Lean.Expr := Lean.Expr.app #[x4340{176}, x4908{1496}]
-let x4958{32} : Lean.Name := Lean.Name.num #[`a.«_@».Init.Core, 10279]
+let x4958{32} : Lean.Name := Lean.Name.num #[`a.«_@».Init.Core, 12533]
 let x4978{64} : Lean.Name := Lean.Name.str #[x4958{32}, "test"]
 let x4998{96} : Lean.Name := Lean.Name.str #[x4978{64}, "basic"]
 let x49b8{128} : Lean.Name := Lean.Name.str #[x4998{96}, "_hyg"]
-let x49d8{160} : Lean.Name := Lean.Name.num #[x49b8{128}, 15]
+let x49d8{160} : Lean.Name := Lean.Name.num #[x49b8{128}, 17]
 let x4a18{64} : Lean.Expr := Lean.Expr.const #[`And.casesOn, x2218{24}]
 let x4a38{96} : Lean.Expr := Lean.Expr.app #[x4a18{64}, x4568{64}]
 let x4a58{128} : Lean.Expr := Lean.Expr.app #[x4a38{96}, x3320{32}]
@@ -442,13 +442,13 @@ let x4b20{128} : Lean.Expr := Lean.Expr.app #[x4b00{96}, x26b0{64}]
 let x4b40{248} : Lean.Expr := Lean.Expr.lam #[`x, x45a8{128}, x4b20{128}, Lean.BinderInfo.default]
 let x4b70{408} : Lean.Expr := Lean.Expr.app #[x4a58{128}, x4b40{248}]
 let x4b90{440} : Lean.Expr := Lean.Expr.app #[x4b70{408}, xab0{24}]
-let x4c78{232} : Lean.Name := Lean.Name.num #[`left._@.test.basic._hyg, 18]
-let x4d60{232} : Lean.Name := Lean.Name.num #[`right._@.test.basic._hyg, 19]
+let x4c78{232} : Lean.Name := Lean.Name.num #[`left._@.test.basic._hyg, 20]
+let x4d60{232} : Lean.Name := Lean.Name.num #[`right._@.test.basic._hyg, 21]
 let x4da0{24} : List.{0} Lean.Level := List.cons #[Lean.Level.zero, xdc8{48}]
 let x4db8{88} : Lean.Expr := Lean.Expr.const #[`Eq.casesOn, x4da0{24}]
 let x4dd8{120} : Lean.Expr := Lean.Expr.app #[x4db8{88}, xcb8{32}]
 let x4df8{152} : Lean.Expr := Lean.Expr.app #[x4dd8{120}, x1cb8{24}]
-let x4e80{136} : Lean.Name := Lean.Name.num #[`a._@.Init.Prelude._hyg, 168]
+let x4e80{136} : Lean.Name := Lean.Name.num #[`a._@.Init.Prelude._hyg, 193]
 let x4ea0{32} : Lean.Expr := Lean.Expr.app #[xe00{184}, x33a0{24}]
 let x4ec0{64} : Lean.Expr := Lean.Expr.app #[x4ea0{32}, xab0{24}]
 let x4f28{32} : Lean.Expr := Lean.Expr.app #[x4788{32}, xe20{24}]
@@ -475,7 +475,7 @@ let x5210{1064} : Lean.Expr := Lean.Expr.lam #[x4e80{136}, xcb8{32}, x51e0{880},
 let x5240{1248} : Lean.Expr := Lean.Expr.app #[x4df8{152}, x5210{1064}]
 let x5260{1280} : Lean.Expr := Lean.Expr.app #[x5240{1248}, x11e8{24}]
 let x5280{1312} : Lean.Expr := Lean.Expr.app #[x5260{1280}, xe20{24}]
-let x5320{160} : Lean.Name := Lean.Name.num #[`h._@.test.basic._hyg, 20]
+let x5320{160} : Lean.Name := Lean.Name.num #[`h._@.test.basic._hyg, 22]
 let x5340{32} : Lean.Expr := Lean.Expr.app #[x4548{32}, x1cb8{24}]
 let x5360{32} : Lean.Expr := Lean.Expr.const #[`Eq.ndrec, x4da0{24}]
 let x5380{64} : Lean.Expr := Lean.Expr.app #[x5360{32}, xcb8{32}]
@@ -496,7 +496,7 @@ let x5550{448} : Lean.Expr := Lean.Expr.forallE #[x4c78{232}, x53e0{64}, x5520{3
 let x5580{496} : Lean.Expr := Lean.Expr.lam #[`s, xcb8{32}, x5550{448}, Lean.BinderInfo.default]
 let x55b0{624} : Lean.Expr := Lean.Expr.app #[x53a0{96}, x5580{496}]
 let x55d0{32} : Lean.Expr := Lean.Expr.app #[x4ea0{32}, x33a0{24}]
-let x55f0{32} : Lean.Name := Lean.Name.num #[`h._@.test.basic._hyg, 21]
+let x55f0{32} : Lean.Name := Lean.Name.num #[`h._@.test.basic._hyg, 23]
 let x5610{32} : Lean.Expr := Lean.Expr.app #[x53c0{32}, x1518{24}]
 let x5630{64} : Lean.Expr := Lean.Expr.app #[x4f90{104}, x5610{32}]
 let x5650{96} : Lean.Expr := Lean.Expr.app #[x5630{64}, xab0{24}]
@@ -528,7 +528,7 @@ let x5988{712} : Lean.Expr := Lean.Expr.lam #[x4e80{136}, xcb8{32}, x5958{664}, 
 let x59b8{776} : Lean.Expr := Lean.Expr.app #[x56d0{32}, x5988{712}]
 let x59d8{808} : Lean.Expr := Lean.Expr.app #[x59b8{776}, x1cb8{24}]
 let x59f8{840} : Lean.Expr := Lean.Expr.app #[x59d8{808}, xeb0{24}]
-let x5a18{32} : Lean.Name := Lean.Name.num #[`h._@.test.basic._hyg, 23]
+let x5a18{32} : Lean.Name := Lean.Name.num #[`h._@.test.basic._hyg, 25]
 let x5a38{32} : Lean.Expr := Lean.Expr.app #[x4788{32}, x1518{24}]
 let x5a58{32} : Lean.Expr := Lean.Expr.app #[x5380{64}, x4fb0{24}]
 let x5a78{32} : Lean.Expr := Lean.Expr.app #[xe00{184}, x50a8{24}]
@@ -546,7 +546,7 @@ let x5bd8{336} : Lean.Expr := Lean.Expr.forallE #[`h, x5b78{224}, x5bb8{64}, Lea
 let x5c08{448} : Lean.Expr := Lean.Expr.forallE #[x4d60{232}, x5a98{64}, x5bd8{336}, Lean.BinderInfo.default]
 let x5c38{496} : Lean.Expr := Lean.Expr.lam #[`s, xcb8{32}, x5c08{448}, Lean.BinderInfo.default]
 let x5c68{560} : Lean.Expr := Lean.Expr.app #[x5a58{32}, x5c38{496}]
-let x5c88{32} : Lean.Name := Lean.Name.num #[`h._@.test.basic._hyg, 24]
+let x5c88{32} : Lean.Name := Lean.Name.num #[`h._@.test.basic._hyg, 26]
 let x5ca8{32} : Lean.Expr := Lean.Expr.app #[x5a78{32}, x50a8{24}]
 let x5cc8{64} : Lean.Expr := Lean.Expr.app #[x4f90{104}, x5ca8{32}]
 let x5ce8{96} : Lean.Expr := Lean.Expr.app #[x5cc8{64}, xab0{24}]
@@ -624,15 +624,15 @@ let x6758{96} : Lean.Expr := Lean.Expr.forallE #[`s, xcb8{32}, x6728{48}, Lean.B
 let x6788{128} : Lean.ConstantVal := Lean.ConstantVal.mk #[`Tree.branch, List.nil, x6758{96}]
 let x67a8{184} : Lean.ConstructorVal := Lean.ConstructorVal.mk #[x6788{128}, `Tree, 1, 0, 2, Bool.false]
 let x67e0{200} : Lean.ConstantInfo := Lean.ConstantInfo.ctorInfo #[x67a8{184}]
-let x6870{160} : Lean.Name := Lean.Name.num #[`x._@.test.basic._hyg, 11]
+let x6870{160} : Lean.Name := Lean.Name.num #[`x._@.test.basic._hyg, 13]
 let x6890{208} : Lean.Expr := Lean.Expr.forallE #[x6870{160}, x4110{64}, x45a8{128}, Lean.BinderInfo.default]
 let x68c0{256} : Lean.Expr := Lean.Expr.forallE #[`s, xcb8{32}, x6890{208}, Lean.BinderInfo.implicit]
 let x68f0{304} : Lean.Expr := Lean.Expr.forallE #[`s, xcb8{32}, x68c0{256}, Lean.BinderInfo.implicit]
 let x6920{352} : Lean.Expr := Lean.Expr.forallE #[`s, xcb8{32}, x68f0{304}, Lean.BinderInfo.implicit]
 let x6950{400} : Lean.Expr := Lean.Expr.forallE #[`s, xcb8{32}, x6920{352}, Lean.BinderInfo.implicit]
 let x6980{432} : Lean.ConstantVal := Lean.ConstantVal.mk #[`Tree.branch.inj, List.nil, x6950{400}]
-let x69a0{32} : Lean.Name := Lean.Name.num #[`s_eq._@.test.basic._hyg, 12]
-let x69c0{32} : Lean.Name := Lean.Name.num #[`s_eq._@.test.basic._hyg, 13]
+let x69a0{32} : Lean.Name := Lean.Name.num #[`s_eq._@.test.basic._hyg, 14]
+let x69c0{32} : Lean.Name := Lean.Name.num #[`s_eq._@.test.basic._hyg, 15]
 let x69e0{80} : Lean.Expr := Lean.Expr.lam #[x69c0{32}, x4568{64}, x4868{256}, Lean.BinderInfo.default]
 let x6a10{160} : Lean.Expr := Lean.Expr.lam #[x69a0{32}, x4568{64}, x69e0{80}, Lean.BinderInfo.default]
 let x6a40{192} : Lean.Expr := Lean.Expr.app #[x46a8{416}, x6a10{160}]
@@ -916,52 +916,53 @@ array 8 #[`someVal,
    `someTree._closed_1,
    `someTree._closed_2]
 let x8f08{264} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.namespacesExt, x8eb0{88}]
-let x8f70{56} : Array.{0} Lean.Name := array 4 #[`Tree.binductionOn, `Tree.brecOn, `Tree.casesOn, `Tree.recOn]
-let x8fa8{160} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.auxRecExt, x8f70{56}]
-let x9010{32} : Array.{0} Lean.Name := array 1 #[`Tree.noConfusion]
-let x9030{136} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.noConfusionExt, x9010{32}]
-let x9098{24} : Lean.Position := Lean.Position.mk #[8, 0]
-let x90b0{24} : Lean.Position := Lean.Position.mk #[11, 11]
-let x90c8{88} : Lean.DeclarationRange := Lean.DeclarationRange.mk #[x9098{24}, 0, x90b0{24}, 11]
-let x90f0{24} : Lean.Position := Lean.Position.mk #[8, 4]
-let x9108{24} : Lean.Position := Lean.Position.mk #[8, 12]
-let x9120{88} : Lean.DeclarationRange := Lean.DeclarationRange.mk #[x90f0{24}, 4, x9108{24}, 12]
-let x9148{200} : Lean.DeclarationRanges := Lean.DeclarationRanges.mk #[x90c8{88}, x9120{88}]
-let x9160{224} : Prod.{0, 0} Lean.Name Lean.DeclarationRanges := Prod.mk #[`someTree, x9148{200}]
-let x9178{24} : Lean.Position := Lean.Position.mk #[1, 0]
-let x9190{24} : Lean.Position := Lean.Position.mk #[1, 36]
-let x91a8{88} : Lean.DeclarationRange := Lean.DeclarationRange.mk #[x9178{24}, 0, x9190{24}, 36]
-let x91d0{24} : Lean.Position := Lean.Position.mk #[1, 4]
-let x91e8{24} : Lean.Position := Lean.Position.mk #[1, 11]
-let x9200{88} : Lean.DeclarationRange := Lean.DeclarationRange.mk #[x91d0{24}, 4, x91e8{24}, 11]
-let x9228{200} : Lean.DeclarationRanges := Lean.DeclarationRanges.mk #[x91a8{88}, x9200{88}]
-let x9240{224} : Prod.{0, 0} Lean.Name Lean.DeclarationRanges := Prod.mk #[`someVal, x9228{200}]
-let x9258{24} : Lean.Position := Lean.Position.mk #[3, 0]
-let x9270{24} : Lean.Position := Lean.Position.mk #[5, 30]
-let x9288{88} : Lean.DeclarationRange := Lean.DeclarationRange.mk #[x9258{24}, 0, x9270{24}, 30]
-let x92b0{24} : Lean.Position := Lean.Position.mk #[3, 10]
-let x92c8{24} : Lean.Position := Lean.Position.mk #[3, 14]
-let x92e0{88} : Lean.DeclarationRange := Lean.DeclarationRange.mk #[x92b0{24}, 10, x92c8{24}, 14]
-let x9308{200} : Lean.DeclarationRanges := Lean.DeclarationRanges.mk #[x9288{88}, x92e0{88}]
-let x9320{224} : Prod.{0, 0} Lean.Name Lean.DeclarationRanges := Prod.mk #[`Tree, x9308{200}]
-let x9338{24} : Lean.Position := Lean.Position.mk #[4, 0]
-let x9350{24} : Lean.Position := Lean.Position.mk #[4, 6]
-let x9368{88} : Lean.DeclarationRange := Lean.DeclarationRange.mk #[x9338{24}, 0, x9350{24}, 6]
-let x9390{24} : Lean.Position := Lean.Position.mk #[4, 2]
-let x93a8{64} : Lean.DeclarationRange := Lean.DeclarationRange.mk #[x9390{24}, 2, x9350{24}, 6]
-let x93d0{176} : Lean.DeclarationRanges := Lean.DeclarationRanges.mk #[x9368{88}, x93a8{64}]
-let x93e8{200} : Prod.{0, 0} Lean.Name Lean.DeclarationRanges := Prod.mk #[`Tree.leaf, x93d0{176}]
-let x9400{24} : Lean.Position := Lean.Position.mk #[5, 0]
-let x9418{64} : Lean.DeclarationRange := Lean.DeclarationRange.mk #[x9400{24}, 0, x9270{24}, 30]
-let x9440{24} : Lean.Position := Lean.Position.mk #[5, 2]
-let x9458{24} : Lean.Position := Lean.Position.mk #[5, 8]
-let x9470{88} : Lean.DeclarationRange := Lean.DeclarationRange.mk #[x9440{24}, 2, x9458{24}, 8]
-let x9498{176} : Lean.DeclarationRanges := Lean.DeclarationRanges.mk #[x9418{64}, x9470{88}]
-let x94b0{200} : Prod.{0, 0} Lean.Name Lean.DeclarationRanges := Prod.mk #[`Tree.branch, x9498{176}]
-let x94c8{1136} : Array.{0} (Prod.{0, 0} Lean.Name Lean.DeclarationRanges) :=
-array 5 #[x9160{224}, x9240{224}, x9320{224}, x93e8{200}, x94b0{200}]
-let x9508{1240} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.declRangeExt, x94c8{1136}]
-let x9570{88} : Array.{0} Lean.Name :=
+let x8f70{72} : Array.{0} Lean.Name :=
+array 6 #[`Tree.binductionOn, `Tree.brecOn, `Tree.casesOn, `Tree.below, `Tree.ibelow, `Tree.recOn]
+let x8fb8{176} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.auxRecExt, x8f70{72}]
+let x9020{32} : Array.{0} Lean.Name := array 1 #[`Tree.noConfusion]
+let x9040{136} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.noConfusionExt, x9020{32}]
+let x90a8{24} : Lean.Position := Lean.Position.mk #[8, 0]
+let x90c0{24} : Lean.Position := Lean.Position.mk #[11, 11]
+let x90d8{88} : Lean.DeclarationRange := Lean.DeclarationRange.mk #[x90a8{24}, 0, x90c0{24}, 11]
+let x9100{24} : Lean.Position := Lean.Position.mk #[8, 4]
+let x9118{24} : Lean.Position := Lean.Position.mk #[8, 12]
+let x9130{88} : Lean.DeclarationRange := Lean.DeclarationRange.mk #[x9100{24}, 4, x9118{24}, 12]
+let x9158{200} : Lean.DeclarationRanges := Lean.DeclarationRanges.mk #[x90d8{88}, x9130{88}]
+let x9170{224} : Prod.{0, 0} Lean.Name Lean.DeclarationRanges := Prod.mk #[`someTree, x9158{200}]
+let x9188{24} : Lean.Position := Lean.Position.mk #[1, 0]
+let x91a0{24} : Lean.Position := Lean.Position.mk #[1, 36]
+let x91b8{88} : Lean.DeclarationRange := Lean.DeclarationRange.mk #[x9188{24}, 0, x91a0{24}, 36]
+let x91e0{24} : Lean.Position := Lean.Position.mk #[1, 4]
+let x91f8{24} : Lean.Position := Lean.Position.mk #[1, 11]
+let x9210{88} : Lean.DeclarationRange := Lean.DeclarationRange.mk #[x91e0{24}, 4, x91f8{24}, 11]
+let x9238{200} : Lean.DeclarationRanges := Lean.DeclarationRanges.mk #[x91b8{88}, x9210{88}]
+let x9250{224} : Prod.{0, 0} Lean.Name Lean.DeclarationRanges := Prod.mk #[`someVal, x9238{200}]
+let x9268{24} : Lean.Position := Lean.Position.mk #[3, 0]
+let x9280{24} : Lean.Position := Lean.Position.mk #[5, 30]
+let x9298{88} : Lean.DeclarationRange := Lean.DeclarationRange.mk #[x9268{24}, 0, x9280{24}, 30]
+let x92c0{24} : Lean.Position := Lean.Position.mk #[3, 10]
+let x92d8{24} : Lean.Position := Lean.Position.mk #[3, 14]
+let x92f0{88} : Lean.DeclarationRange := Lean.DeclarationRange.mk #[x92c0{24}, 10, x92d8{24}, 14]
+let x9318{200} : Lean.DeclarationRanges := Lean.DeclarationRanges.mk #[x9298{88}, x92f0{88}]
+let x9330{224} : Prod.{0, 0} Lean.Name Lean.DeclarationRanges := Prod.mk #[`Tree, x9318{200}]
+let x9348{24} : Lean.Position := Lean.Position.mk #[4, 0]
+let x9360{24} : Lean.Position := Lean.Position.mk #[4, 6]
+let x9378{88} : Lean.DeclarationRange := Lean.DeclarationRange.mk #[x9348{24}, 0, x9360{24}, 6]
+let x93a0{24} : Lean.Position := Lean.Position.mk #[4, 2]
+let x93b8{64} : Lean.DeclarationRange := Lean.DeclarationRange.mk #[x93a0{24}, 2, x9360{24}, 6]
+let x93e0{176} : Lean.DeclarationRanges := Lean.DeclarationRanges.mk #[x9378{88}, x93b8{64}]
+let x93f8{200} : Prod.{0, 0} Lean.Name Lean.DeclarationRanges := Prod.mk #[`Tree.leaf, x93e0{176}]
+let x9410{24} : Lean.Position := Lean.Position.mk #[5, 0]
+let x9428{64} : Lean.DeclarationRange := Lean.DeclarationRange.mk #[x9410{24}, 0, x9280{24}, 30]
+let x9450{24} : Lean.Position := Lean.Position.mk #[5, 2]
+let x9468{24} : Lean.Position := Lean.Position.mk #[5, 8]
+let x9480{88} : Lean.DeclarationRange := Lean.DeclarationRange.mk #[x9450{24}, 2, x9468{24}, 8]
+let x94a8{176} : Lean.DeclarationRanges := Lean.DeclarationRanges.mk #[x9428{64}, x9480{88}]
+let x94c0{200} : Prod.{0, 0} Lean.Name Lean.DeclarationRanges := Prod.mk #[`Tree.branch, x94a8{176}]
+let x94d8{1136} : Array.{0} (Prod.{0, 0} Lean.Name Lean.DeclarationRanges) :=
+array 5 #[x9170{224}, x9250{224}, x9330{224}, x93f8{200}, x94c0{200}]
+let x9518{1240} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.declRangeExt, x94d8{1136}]
+let x9580{88} : Array.{0} Lean.Name :=
 array 8 #[`Tree.binductionOn,
    `Tree.brecOn,
    `Tree.casesOn,
@@ -970,340 +971,401 @@ array 8 #[`Tree.binductionOn,
    `Tree.ibelow,
    `Tree.noConfusionType,
    `Tree.recOn]
-let x95c8{192} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.protectedExt, x9570{88}]
-let x9648{128} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.aliasExtension, #[]]
-let x96b8{112} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.attributeExtension, #[]]
-let x9770{184} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.Compiler.inlineAttrs, #[]]
-let x97d8{104} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.classExtension, #[]]
-let x9848{24} : Prod.{0, 0} Lean.Name Lean.ReducibilityStatus :=
+let x95d8{192} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.protectedExt, x9580{88}]
+let x9658{128} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.aliasExtension, #[]]
+let x96c8{112} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.attributeExtension, #[]]
+let x9780{184} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.Compiler.inlineAttrs, #[]]
+let x97e8{104} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.classExtension, #[]]
+let x9858{24} : Prod.{0, 0} Lean.Name Lean.ReducibilityStatus :=
 Prod.mk #[`Tree.binductionOn, Lean.ReducibilityStatus.reducible]
-let x9860{24} : Prod.{0, 0} Lean.Name Lean.ReducibilityStatus :=
+let x9870{24} : Prod.{0, 0} Lean.Name Lean.ReducibilityStatus :=
 Prod.mk #[`Tree.brecOn, Lean.ReducibilityStatus.reducible]
-let x9878{24} : Prod.{0, 0} Lean.Name Lean.ReducibilityStatus :=
+let x9888{24} : Prod.{0, 0} Lean.Name Lean.ReducibilityStatus :=
 Prod.mk #[`Tree.casesOn, Lean.ReducibilityStatus.reducible]
-let x9890{24} : Prod.{0, 0} Lean.Name Lean.ReducibilityStatus :=
+let x98a0{24} : Prod.{0, 0} Lean.Name Lean.ReducibilityStatus :=
 Prod.mk #[`Tree.below, Lean.ReducibilityStatus.reducible]
-let x98a8{24} : Prod.{0, 0} Lean.Name Lean.ReducibilityStatus :=
+let x98b8{24} : Prod.{0, 0} Lean.Name Lean.ReducibilityStatus :=
 Prod.mk #[`Tree.noConfusion, Lean.ReducibilityStatus.reducible]
-let x98c0{24} : Prod.{0, 0} Lean.Name Lean.ReducibilityStatus :=
+let x98d0{24} : Prod.{0, 0} Lean.Name Lean.ReducibilityStatus :=
 Prod.mk #[`Tree.ibelow, Lean.ReducibilityStatus.reducible]
-let x98d8{24} : Prod.{0, 0} Lean.Name Lean.ReducibilityStatus :=
+let x98e8{24} : Prod.{0, 0} Lean.Name Lean.ReducibilityStatus :=
 Prod.mk #[`Tree.noConfusionType, Lean.ReducibilityStatus.reducible]
-let x98f0{24} : Prod.{0, 0} Lean.Name Lean.ReducibilityStatus :=
+let x9900{24} : Prod.{0, 0} Lean.Name Lean.ReducibilityStatus :=
 Prod.mk #[`Tree.recOn, Lean.ReducibilityStatus.reducible]
-let x9908{280} : Array.{0} (Prod.{0, 0} Lean.Name Lean.ReducibilityStatus) :=
-array 8 #[x9848{24}, x9860{24}, x9878{24}, x9890{24}, x98a8{24}, x98c0{24}, x98d8{24}, x98f0{24}]
-let x9960{392} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
-Prod.mk #[`Lean.reducibilityAttrs, x9908{280}]
-let x99d0{112} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+let x9918{280} : Array.{0} (Prod.{0, 0} Lean.Name Lean.ReducibilityStatus) :=
+array 8 #[x9858{24}, x9870{24}, x9888{24}, x98a0{24}, x98b8{24}, x98d0{24}, x98e8{24}, x9900{24}]
+let x9970{392} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`reducibilityCore, x9918{280}]
+let x99e0{112} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`reducibilityExtra, #[]]
+let x9a50{112} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
 Prod.mk #[`Lean.Compiler.nospecializeAttr, #[]]
-let x9a38{104} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+let x9ab8{104} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
 Prod.mk #[`Lean.Compiler.specializeAttr, #[]]
-let x9aa0{24} : Lean.Compiler.SpecInfo := Lean.Compiler.SpecInfo.mk #[x7940{24}, List.nil]
-let x9ab8{48} : Lean.Compiler.SpecEntry := Lean.Compiler.SpecEntry.info #[`someVal, x9aa0{24}]
-let x9ad0{24} : Lean.Compiler.SpecInfo := Lean.Compiler.SpecInfo.mk #[x6cb8{24}, List.nil]
-let x9ae8{48} : Lean.Compiler.SpecEntry := Lean.Compiler.SpecEntry.info #[`someTree, x9ad0{24}]
-let x9b00{136} : Array.{0} Lean.Compiler.SpecEntry := array 2 #[x9ab8{48}, x9ae8{48}]
-let x9b28{240} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
-Prod.mk #[`Lean.Compiler.specExtension, x9b00{136}]
-let x9b98{112} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.projectionFnInfoExt, #[]]
-let x9c00{104} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.externAttr, #[]]
-let x9c70{112} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+let x9b20{24} : Lean.Compiler.SpecInfo := Lean.Compiler.SpecInfo.mk #[x7940{24}, List.nil]
+let x9b38{48} : Lean.Compiler.SpecEntry := Lean.Compiler.SpecEntry.info #[`someVal, x9b20{24}]
+let x9b50{24} : Lean.Compiler.SpecInfo := Lean.Compiler.SpecInfo.mk #[x6cb8{24}, List.nil]
+let x9b68{48} : Lean.Compiler.SpecEntry := Lean.Compiler.SpecEntry.info #[`someTree, x9b50{24}]
+let x9b80{136} : Array.{0} Lean.Compiler.SpecEntry := array 2 #[x9b38{48}, x9b68{48}]
+let x9ba8{240} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+Prod.mk #[`Lean.Compiler.specExtension, x9b80{136}]
+let x9c18{112} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.projectionFnInfoExt, #[]]
+let x9c80{104} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.externAttr, #[]]
+let x9cf0{112} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
 Prod.mk #[`Lean.Compiler.implementedByAttr, #[]]
-let x9ce0{112} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.neverExtractAttr, #[]]
-let x9d90{24} : Lean.IR.Expr := Lean.IR.Expr.fap #[`someTree._closed_2, #[]]
-let x9da8{16} : Lean.IR.FnBody := Lean.IR.FnBody.ret #[x7468{16}]
-let x9db8{80} : Lean.IR.FnBody :=
-Lean.IR.FnBody.vdecl #[Lean.IR.VarId.mk #[1], Lean.IR.IRType.object, x9d90{24}, x9da8{16}]
-let x9de0{128} : Lean.IR.Decl :=
-Lean.IR.Decl.fdecl #[`someTree, #[], Lean.IR.IRType.object, x9db8{80}, Lean.IR.DeclInfo.mk #[Option.none]]
-let x9e10{24} : Lean.IR.Expr := Lean.IR.Expr.fap #[`someVal._closed_1, #[]]
-let x9e28{64} : Lean.IR.FnBody :=
-Lean.IR.FnBody.vdecl #[Lean.IR.VarId.mk #[1], Lean.IR.IRType.object, x9e10{24}, x9da8{16}]
-let x9e50{112} : Lean.IR.Decl :=
-Lean.IR.Decl.fdecl #[`someVal, #[], Lean.IR.IRType.object, x9e28{64}, Lean.IR.DeclInfo.mk #[Option.none]]
-let x9e80{48} : Lean.IR.CtorInfo := Lean.IR.CtorInfo.mk #[`Tree.leaf, 0, 0, 0, 0]
-let x9eb0{72} : Lean.IR.Expr := Lean.IR.Expr.ctor #[x9e80{48}, #[]]
-let x9ec8{48} : Lean.IR.CtorInfo := Lean.IR.CtorInfo.mk #[`Tree.branch, 1, 2, 0, 0]
-let x9ef8{40} : Array.{0} Lean.IR.Arg := array 2 #[x7468{16}, x7468{16}]
-let x9f20{112} : Lean.IR.Expr := Lean.IR.Expr.ctor #[x9ec8{48}, x9ef8{40}]
-let x9f38{16} : Lean.IR.Arg := Lean.IR.Arg.var #[Lean.IR.VarId.mk #[2]]
-let x9f48{32} : Lean.IR.FnBody := Lean.IR.FnBody.ret #[x9f38{16}]
-let x9f58{184} : Lean.IR.FnBody :=
-Lean.IR.FnBody.vdecl #[Lean.IR.VarId.mk #[2], Lean.IR.IRType.object, x9f20{112}, x9f48{32}]
-let x9f80{296} : Lean.IR.FnBody :=
-Lean.IR.FnBody.vdecl #[Lean.IR.VarId.mk #[1], Lean.IR.IRType.object, x9eb0{72}, x9f58{184}]
-let x9fa8{344} : Lean.IR.Decl :=
-Lean.IR.Decl.fdecl #[`someTree._closed_1, #[], Lean.IR.IRType.object, x9f80{296}, Lean.IR.DeclInfo.mk #[Option.none]]
-let x9fd8{24} : Lean.IR.Expr := Lean.IR.Expr.fap #[`someTree._closed_1, #[]]
-let x9ff0{40} : Array.{0} Lean.IR.Arg := array 2 #[x7468{16}, x9f38{16}]
-let xa018{64} : Lean.IR.Expr := Lean.IR.Expr.ctor #[x9ec8{48}, x9ff0{40}]
-let xa030{16} : Lean.IR.Arg := Lean.IR.Arg.var #[Lean.IR.VarId.mk #[3]]
-let xa040{32} : Lean.IR.FnBody := Lean.IR.FnBody.ret #[xa030{16}]
-let xa050{136} : Lean.IR.FnBody :=
-Lean.IR.FnBody.vdecl #[Lean.IR.VarId.mk #[3], Lean.IR.IRType.object, xa018{64}, xa040{32}]
-let xa078{176} : Lean.IR.FnBody :=
-Lean.IR.FnBody.vdecl #[Lean.IR.VarId.mk #[2], Lean.IR.IRType.object, x9eb0{72}, xa050{136}]
-let xa0a0{240} : Lean.IR.FnBody :=
-Lean.IR.FnBody.vdecl #[Lean.IR.VarId.mk #[1], Lean.IR.IRType.object, x9fd8{24}, xa078{176}]
-let xa0c8{288} : Lean.IR.Decl :=
-Lean.IR.Decl.fdecl #[`someTree._closed_2, #[], Lean.IR.IRType.object, xa0a0{240}, Lean.IR.DeclInfo.mk #[Option.none]]
-let xa0f8{16} : Lean.IR.Expr := Lean.IR.Expr.lit #[x3750{16}]
-let xa108{48} : Lean.IR.CtorInfo := Lean.IR.CtorInfo.mk #[`Sum.inl, 0, 1, 0, 0]
-let xa138{32} : Array.{0} Lean.IR.Arg := array 1 #[x7468{16}]
-let xa158{104} : Lean.IR.Expr := Lean.IR.Expr.ctor #[xa108{48}, xa138{32}]
-let xa170{144} : Lean.IR.FnBody :=
-Lean.IR.FnBody.vdecl #[Lean.IR.VarId.mk #[2], Lean.IR.IRType.object, xa158{104}, x9f48{32}]
-let xa198{200} : Lean.IR.FnBody :=
-Lean.IR.FnBody.vdecl #[Lean.IR.VarId.mk #[1], Lean.IR.IRType.object, xa0f8{16}, xa170{144}]
-let xa1c0{248} : Lean.IR.Decl :=
-Lean.IR.Decl.fdecl #[`someVal._closed_1, #[], Lean.IR.IRType.object, xa198{200}, Lean.IR.DeclInfo.mk #[Option.none]]
-let xa1f0{1184} : Array.{0} Lean.IR.Decl := array 5 #[x9de0{128}, x9e50{112}, x9fa8{344}, xa0c8{288}, xa1c0{248}]
-let xa230{1360} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
-Prod.mk #[`Lean.IR.declMapExt, xa1f0{1184}]
-let xa298{104} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.exportAttr, #[]]
-let xa350{184} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+let x9d60{112} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.neverExtractAttr, #[]]
+let x9e10{24} : Lean.IR.Expr := Lean.IR.Expr.fap #[`someTree._closed_2, #[]]
+let x9e28{16} : Lean.IR.FnBody := Lean.IR.FnBody.ret #[x7468{16}]
+let x9e38{80} : Lean.IR.FnBody :=
+Lean.IR.FnBody.vdecl #[Lean.IR.VarId.mk #[1], Lean.IR.IRType.object, x9e10{24}, x9e28{16}]
+let x9e60{128} : Lean.IR.Decl :=
+Lean.IR.Decl.fdecl #[`someTree, #[], Lean.IR.IRType.object, x9e38{80}, Lean.IR.DeclInfo.mk #[Option.none]]
+let x9e90{24} : Lean.IR.Expr := Lean.IR.Expr.fap #[`someVal._closed_1, #[]]
+let x9ea8{64} : Lean.IR.FnBody :=
+Lean.IR.FnBody.vdecl #[Lean.IR.VarId.mk #[1], Lean.IR.IRType.object, x9e90{24}, x9e28{16}]
+let x9ed0{112} : Lean.IR.Decl :=
+Lean.IR.Decl.fdecl #[`someVal, #[], Lean.IR.IRType.object, x9ea8{64}, Lean.IR.DeclInfo.mk #[Option.none]]
+let x9f00{48} : Lean.IR.CtorInfo := Lean.IR.CtorInfo.mk #[`Tree.leaf, 0, 0, 0, 0]
+let x9f30{72} : Lean.IR.Expr := Lean.IR.Expr.ctor #[x9f00{48}, #[]]
+let x9f48{48} : Lean.IR.CtorInfo := Lean.IR.CtorInfo.mk #[`Tree.branch, 1, 2, 0, 0]
+let x9f78{40} : Array.{0} Lean.IR.Arg := array 2 #[x7468{16}, x7468{16}]
+let x9fa0{112} : Lean.IR.Expr := Lean.IR.Expr.ctor #[x9f48{48}, x9f78{40}]
+let x9fb8{16} : Lean.IR.Arg := Lean.IR.Arg.var #[Lean.IR.VarId.mk #[2]]
+let x9fc8{32} : Lean.IR.FnBody := Lean.IR.FnBody.ret #[x9fb8{16}]
+let x9fd8{184} : Lean.IR.FnBody :=
+Lean.IR.FnBody.vdecl #[Lean.IR.VarId.mk #[2], Lean.IR.IRType.object, x9fa0{112}, x9fc8{32}]
+let xa000{296} : Lean.IR.FnBody :=
+Lean.IR.FnBody.vdecl #[Lean.IR.VarId.mk #[1], Lean.IR.IRType.object, x9f30{72}, x9fd8{184}]
+let xa028{344} : Lean.IR.Decl :=
+Lean.IR.Decl.fdecl #[`someTree._closed_1, #[], Lean.IR.IRType.object, xa000{296}, Lean.IR.DeclInfo.mk #[Option.none]]
+let xa058{24} : Lean.IR.Expr := Lean.IR.Expr.fap #[`someTree._closed_1, #[]]
+let xa070{40} : Array.{0} Lean.IR.Arg := array 2 #[x7468{16}, x9fb8{16}]
+let xa098{64} : Lean.IR.Expr := Lean.IR.Expr.ctor #[x9f48{48}, xa070{40}]
+let xa0b0{16} : Lean.IR.Arg := Lean.IR.Arg.var #[Lean.IR.VarId.mk #[3]]
+let xa0c0{32} : Lean.IR.FnBody := Lean.IR.FnBody.ret #[xa0b0{16}]
+let xa0d0{136} : Lean.IR.FnBody :=
+Lean.IR.FnBody.vdecl #[Lean.IR.VarId.mk #[3], Lean.IR.IRType.object, xa098{64}, xa0c0{32}]
+let xa0f8{176} : Lean.IR.FnBody :=
+Lean.IR.FnBody.vdecl #[Lean.IR.VarId.mk #[2], Lean.IR.IRType.object, x9f30{72}, xa0d0{136}]
+let xa120{240} : Lean.IR.FnBody :=
+Lean.IR.FnBody.vdecl #[Lean.IR.VarId.mk #[1], Lean.IR.IRType.object, xa058{24}, xa0f8{176}]
+let xa148{288} : Lean.IR.Decl :=
+Lean.IR.Decl.fdecl #[`someTree._closed_2, #[], Lean.IR.IRType.object, xa120{240}, Lean.IR.DeclInfo.mk #[Option.none]]
+let xa178{16} : Lean.IR.Expr := Lean.IR.Expr.lit #[x3750{16}]
+let xa188{48} : Lean.IR.CtorInfo := Lean.IR.CtorInfo.mk #[`Sum.inl, 0, 1, 0, 0]
+let xa1b8{32} : Array.{0} Lean.IR.Arg := array 1 #[x7468{16}]
+let xa1d8{104} : Lean.IR.Expr := Lean.IR.Expr.ctor #[xa188{48}, xa1b8{32}]
+let xa1f0{144} : Lean.IR.FnBody :=
+Lean.IR.FnBody.vdecl #[Lean.IR.VarId.mk #[2], Lean.IR.IRType.object, xa1d8{104}, x9fc8{32}]
+let xa218{200} : Lean.IR.FnBody :=
+Lean.IR.FnBody.vdecl #[Lean.IR.VarId.mk #[1], Lean.IR.IRType.object, xa178{16}, xa1f0{144}]
+let xa240{248} : Lean.IR.Decl :=
+Lean.IR.Decl.fdecl #[`someVal._closed_1, #[], Lean.IR.IRType.object, xa218{200}, Lean.IR.DeclInfo.mk #[Option.none]]
+let xa270{1184} : Array.{0} Lean.IR.Decl := array 5 #[x9e60{128}, x9ed0{112}, xa028{344}, xa148{288}, xa240{248}]
+let xa2b0{1360} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+Prod.mk #[`Lean.IR.declMapExt, xa270{1184}]
+let xa318{104} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.exportAttr, #[]]
+let xa3d0{184} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
 Prod.mk #[`Lean.IR.UnboxResult.unboxAttr, #[]]
-let xa418{40} : Array.{0} Lean.IR.UnreachableBranches.Value :=
+let xa498{40} : Array.{0} Lean.IR.UnreachableBranches.Value :=
 array 2 #[Lean.IR.UnreachableBranches.Value.top, Lean.IR.UnreachableBranches.Value.top]
-let xa440{64} : Lean.IR.UnreachableBranches.Value := Lean.IR.UnreachableBranches.Value.ctor #[x9ec8{48}, xa418{40}]
-let xa458{88} : Prod.{0, 0} Lean.IR.FunId Lean.IR.UnreachableBranches.Value := Prod.mk #[`someTree, xa440{64}]
-let xa470{32} : Array.{0} Lean.IR.UnreachableBranches.Value := array 1 #[Lean.IR.UnreachableBranches.Value.top]
-let xa490{56} : Lean.IR.UnreachableBranches.Value := Lean.IR.UnreachableBranches.Value.ctor #[xa108{48}, xa470{32}]
-let xa4a8{80} : Prod.{0, 0} Lean.IR.FunId Lean.IR.UnreachableBranches.Value := Prod.mk #[`someVal, xa490{56}]
-let xa4c0{24} : Prod.{0, 0} Lean.IR.FunId Lean.IR.UnreachableBranches.Value := Prod.mk #[`someTree._closed_1, xa440{64}]
-let xa4d8{24} : Prod.{0, 0} Lean.IR.FunId Lean.IR.UnreachableBranches.Value := Prod.mk #[`someTree._closed_2, xa440{64}]
-let xa4f0{24} : Prod.{0, 0} Lean.IR.FunId Lean.IR.UnreachableBranches.Value := Prod.mk #[`someVal._closed_1, xa490{56}]
-let xa508{304} : Array.{0} (Prod.{0, 0} Lean.IR.FunId Lean.IR.UnreachableBranches.Value) :=
-array 5 #[xa458{88}, xa4a8{80}, xa4c0{24}, xa4d8{24}, xa4f0{24}]
-let xa548{504} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
-Prod.mk #[`Lean.IR.UnreachableBranches.functionSummariesExt, xa508{304}]
-let xa5b0{104} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.regularInitAttr, #[]]
-let xa618{104} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.builtinInitAttr, #[]]
-let xa6c0{168} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.Compiler.CSimp.ext, #[]]
-let xa730{112} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.noncomputableExt, #[]]
-let xa7e8{16} : Lean.ScopedEnvExtension.Entry Lean.Name := Lean.ScopedEnvExtension.Entry.global #[`Tree._sizeOf_inst]
-let xa7f8{48} : Array.{0} (Lean.ScopedEnvExtension.Entry Lean.Name) := array 1 #[xa7e8{16}]
-let xa818{232} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
-Prod.mk #[`Lean.Meta.globalInstanceExtension, xa7f8{48}]
-let xa880{104} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.structureExt, #[]]
-let xa980{256} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+let xa4c0{64} : Lean.IR.UnreachableBranches.Value := Lean.IR.UnreachableBranches.Value.ctor #[x9f48{48}, xa498{40}]
+let xa4d8{88} : Prod.{0, 0} Lean.IR.FunId Lean.IR.UnreachableBranches.Value := Prod.mk #[`someTree, xa4c0{64}]
+let xa4f0{32} : Array.{0} Lean.IR.UnreachableBranches.Value := array 1 #[Lean.IR.UnreachableBranches.Value.top]
+let xa510{56} : Lean.IR.UnreachableBranches.Value := Lean.IR.UnreachableBranches.Value.ctor #[xa188{48}, xa4f0{32}]
+let xa528{80} : Prod.{0, 0} Lean.IR.FunId Lean.IR.UnreachableBranches.Value := Prod.mk #[`someVal, xa510{56}]
+let xa540{24} : Prod.{0, 0} Lean.IR.FunId Lean.IR.UnreachableBranches.Value := Prod.mk #[`someTree._closed_1, xa4c0{64}]
+let xa558{24} : Prod.{0, 0} Lean.IR.FunId Lean.IR.UnreachableBranches.Value := Prod.mk #[`someTree._closed_2, xa4c0{64}]
+let xa570{24} : Prod.{0, 0} Lean.IR.FunId Lean.IR.UnreachableBranches.Value := Prod.mk #[`someVal._closed_1, xa510{56}]
+let xa588{304} : Array.{0} (Prod.{0, 0} Lean.IR.FunId Lean.IR.UnreachableBranches.Value) :=
+array 5 #[xa4d8{88}, xa528{80}, xa540{24}, xa558{24}, xa570{24}]
+let xa5c8{504} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+Prod.mk #[`Lean.IR.UnreachableBranches.functionSummariesExt, xa588{304}]
+let xa630{104} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.regularInitAttr, #[]]
+let xa698{104} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.builtinInitAttr, #[]]
+let xa740{168} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.Compiler.CSimp.ext, #[]]
+let xa7b0{112} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.noncomputableExt, #[]]
+let xa868{16} : Lean.ScopedEnvExtension.Entry Lean.Name := Lean.ScopedEnvExtension.Entry.global #[`Tree._sizeOf_inst]
+let xa878{48} : Array.{0} (Lean.ScopedEnvExtension.Entry Lean.Name) := array 1 #[xa868{16}]
+let xa898{232} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+Prod.mk #[`Lean.Meta.globalInstanceExtension, xa878{48}]
+let xa900{104} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.structureExt, #[]]
+let xaa00{256} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
 Prod.mk #[`Lean.Meta.Match.Extension.extension, #[]]
-let xa9f0{112} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.matchPatternAttr, #[]]
-let xaa60{24} : Lean.Meta.InstanceKey := Lean.Meta.DiscrTree.Key.const #[`SizeOf, 1]
-let xaa78{24} : Lean.Meta.InstanceKey := Lean.Meta.DiscrTree.Key.const #[`Tree, 0]
-let xaa90{88} : Array.{0} Lean.Meta.InstanceKey := array 2 #[xaa60{24}, xaa78{24}]
-let xaab8{16} : Option.{0} Lean.Name := Option.some #[`Tree._sizeOf_inst]
-let xaac8{160} : Lean.Meta.InstanceEntry :=
-Lean.Meta.InstanceEntry.mk #[xaa90{88}, x70b0{32}, 1000, xaab8{16}, #[], Lean.AttributeKind.global]
-let xab00{176} : Lean.ScopedEnvExtension.Entry Lean.Meta.InstanceEntry :=
-Lean.ScopedEnvExtension.Entry.global #[xaac8{160}]
-let xab10{208} : Array.{0} (Lean.ScopedEnvExtension.Entry Lean.Meta.InstanceEntry) := array 1 #[xab00{176}]
-let xab30{320} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
-Prod.mk #[`Lean.Meta.instanceExtension, xab10{208}]
-let xaba8{120} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+let xaa70{112} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.matchPatternAttr, #[]]
+let xaae0{24} : Lean.Meta.InstanceKey := Lean.Meta.DiscrTree.Key.const #[`SizeOf, 1]
+let xaaf8{24} : Lean.Meta.InstanceKey := Lean.Meta.DiscrTree.Key.const #[`Tree, 0]
+let xab10{88} : Array.{0} Lean.Meta.InstanceKey := array 2 #[xaae0{24}, xaaf8{24}]
+let xab38{16} : Option.{0} Lean.Name := Option.some #[`Tree._sizeOf_inst]
+let xab48{160} : Lean.Meta.InstanceEntry :=
+Lean.Meta.InstanceEntry.mk #[xab10{88}, x70b0{32}, 1000, xab38{16}, #[], Lean.AttributeKind.global]
+let xab80{176} : Lean.ScopedEnvExtension.Entry Lean.Meta.InstanceEntry :=
+Lean.ScopedEnvExtension.Entry.global #[xab48{160}]
+let xab90{208} : Array.{0} (Lean.ScopedEnvExtension.Entry Lean.Meta.InstanceEntry) := array 1 #[xab80{176}]
+let xabb0{320} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+Prod.mk #[`Lean.Meta.instanceExtension, xab90{208}]
+let xac28{120} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
 Prod.mk #[`Lean.Meta.defaultInstanceExtension, #[]]
-let xac50{168} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.Compiler.LCNF.baseExt, #[]]
-let xacb0{96} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.Compiler.LCNF.monoExt, #[]]
-let xad18{104} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.Meta.coeDeclAttr, #[]]
-let xadc8{176} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.Linter.deprecatedAttr, #[]]
-let xae30{104} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.docStringExt, #[]]
-let xae98{104} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.moduleDocExt, #[]]
-let xaf48{176} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+let xacd0{168} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.Compiler.LCNF.baseExt, #[]]
+let xad30{96} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.Compiler.LCNF.monoExt, #[]]
+let xada8{120} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+Prod.mk #[`Lean.ppUsingAnonymousConstructorAttr, #[]]
+let xae10{104} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.ppNoDotAttr, #[]]
+let xae78{104} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.Meta.coeDeclAttr, #[]]
+let xaf28{176} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.Linter.deprecatedAttr, #[]]
+let xaf90{104} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.docStringExt, #[]]
+let xaff8{104} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.moduleDocExt, #[]]
+let xb0a8{176} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
 Prod.mk #[`Lean.Parser.parserExtension, #[]]
-let xb008{192} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+let xb168{192} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
 Prod.mk #[`Lean.PrettyPrinter.parenthesizerAttribute, #[]]
-let xb080{120} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+let xb1e0{120} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
 Prod.mk #[`Lean.PrettyPrinter.categoryParenthesizerAttribute, #[]]
-let xb100{128} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+let xb260{128} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
 Prod.mk #[`Lean.PrettyPrinter.mkCombinatorParenthesizerAttribute, #[]]
-let xb170{112} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+let xb2d0{112} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
 Prod.mk #[`Lean.PrettyPrinter.formatterAttribute, #[]]
-let xb1e8{120} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+let xb348{120} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
 Prod.mk #[`Lean.PrettyPrinter.mkCombinatorFormatterAttribute, #[]]
-let xb298{176} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.Elab.macroAttribute, #[]]
-let xb350{184} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+let xb3f8{176} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.Elab.macroAttribute, #[]]
+let xb4b0{184} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
 Prod.mk #[`Lean.Elab.Term.termElabAttribute, #[]]
-let xb408{184} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+let xb518{104} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.Elab.incrementalAttr, #[]]
+let xb5d0{184} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
 Prod.mk #[`Lean.PrettyPrinter.Delaborator.delabAttribute, #[]]
-let xb478{112} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+let xb640{112} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
 Prod.mk #[`Lean.PrettyPrinter.Delaborator.appUnexpanderAttribute, #[]]
-let xb578{256} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+let xb740{256} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+Prod.mk #[`Lean.Parser.Tactic.Doc.tacticAlternativeExt, #[]]
+let xb7b0{112} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+Prod.mk #[`Lean.Parser.Tactic.Doc.knownTacticTagExt, #[]]
+let xb818{104} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+Prod.mk #[`Lean.Parser.Tactic.Doc.tacticTagExt, #[]]
+let xb880{104} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+Prod.mk #[`Lean.Parser.Tactic.Doc.tacticDocExtExt, #[]]
+let xb8e0{96} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.Meta.coeExt, #[]]
+let xb9e0{256} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
 Prod.mk #[`Lean.Compiler.LCNF.Simp.ConstantFold.folderExt, #[]]
-let xb5b0{56} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+let xba18{56} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
 Prod.mk #[`Lean.Compiler.LCNF.specExtension, #[]]
-let xb668{184} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+let xbad0{184} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
 Prod.mk #[`Lean.Compiler.LCNF.Specialize.specCacheExt, #[]]
-let xb6c0{88} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+let xbb28{88} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
 Prod.mk #[`Lean.Compiler.LCNF.UnreachableBranches.functionSummariesExt, #[]]
-let xb728{104} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+let xbb90{104} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
 Prod.mk #[`Lean.Compiler.LCNF.passManagerExt, #[]]
-let xb7e8{192} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+let xbc50{192} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
 Prod.mk #[`Lean.Elab.Term.Quotation.precheckAttribute, #[]]
-let xb8a0{184} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+let xbce0{144} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
 Prod.mk #[`Lean.Elab.Tactic.tacticElabAttribute, #[]]
-let xb958{184} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+let xbd98{184} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
 Prod.mk #[`Lean.Elab.Command.commandElabAttribute, #[]]
-let xb9c8{112} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+let xbe08{112} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
 Prod.mk #[`Lean.Meta.customEliminatorExt, #[]]
-let xba40{120} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+let xbe80{120} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
 Prod.mk #[`Lean.Elab.Term.elabWithoutExpectedTypeAttr, #[]]
-let xbaa8{104} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.Elab.Term.elabAsElim, #[]]
-let xbb18{112} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
-Prod.mk #[`Lean.Meta.recursorAttribute, #[]]
-let xbb80{24} : Lean.Meta.SimpTheoremKey := Lean.Meta.DiscrTree.Key.const #[`SizeOf.sizeOf, 3]
-let xbb98{24} : Lean.Meta.SimpTheoremKey := Lean.Meta.DiscrTree.Key.const #[`Tree.leaf, 0]
-let xbbb0{104} : Array.{0} Lean.Meta.SimpTheoremKey :=
-array 4 #[xbb80{24}, xaa78{24}, Lean.Meta.DiscrTree.Key.star, xbb98{24}]
-let xbbe8{32} : Lean.Expr := Lean.Expr.const #[`Tree.leaf.sizeOf_spec, List.nil]
-let xbc08{24} : Lean.Meta.Origin := Lean.Meta.Origin.decl #[`Tree.leaf.sizeOf_spec, Bool.true, Bool.false]
-let xbc20{216} : Lean.Meta.SimpTheorem :=
-Lean.Meta.SimpTheorem.mk #[xbbb0{104}, #[], xbbe8{32}, 1000, Bool.true, Bool.false, xbc08{24}, Bool.true]
-let xbc58{232} : Lean.Meta.SimpEntry := Lean.Meta.SimpEntry.thm #[xbc20{216}]
-let xbc68{248} : Lean.ScopedEnvExtension.Entry Lean.Meta.SimpEntry := Lean.ScopedEnvExtension.Entry.global #[xbc58{232}]
-let xbc78{24} : Lean.Meta.SimpTheoremKey := Lean.Meta.DiscrTree.Key.const #[`Tree.branch, 2]
-let xbc90{96} : Array.{0} Lean.Meta.SimpTheoremKey :=
-array 6 #[xbb80{24},
-   xaa78{24},
-   Lean.Meta.DiscrTree.Key.star,
-   xbc78{24},
-   Lean.Meta.DiscrTree.Key.star,
-   Lean.Meta.DiscrTree.Key.star]
-let xbcd8{32} : Lean.Expr := Lean.Expr.const #[`Tree.branch.sizeOf_spec, List.nil]
-let xbcf8{24} : Lean.Meta.Origin := Lean.Meta.Origin.decl #[`Tree.branch.sizeOf_spec, Bool.true, Bool.false]
-let xbd10{208} : Lean.Meta.SimpTheorem :=
-Lean.Meta.SimpTheorem.mk #[xbc90{96}, #[], xbcd8{32}, 1000, Bool.true, Bool.false, xbcf8{24}, Bool.true]
-let xbd48{224} : Lean.Meta.SimpEntry := Lean.Meta.SimpEntry.thm #[xbd10{208}]
-let xbd58{240} : Lean.ScopedEnvExtension.Entry Lean.Meta.SimpEntry := Lean.ScopedEnvExtension.Entry.global #[xbd48{224}]
-let xbd68{24} : Lean.Meta.SimpTheoremKey := Lean.Meta.DiscrTree.Key.const #[`Eq, 3]
-let xbd80{112} : Array.{0} Lean.Meta.SimpTheoremKey :=
-array 8 #[xbd68{24},
-   xaa78{24},
-   xbc78{24},
-   Lean.Meta.DiscrTree.Key.star,
-   Lean.Meta.DiscrTree.Key.star,
-   xbc78{24},
-   Lean.Meta.DiscrTree.Key.star,
-   Lean.Meta.DiscrTree.Key.star]
-let xbdd8{32} : Lean.Expr := Lean.Expr.const #[`Tree.branch.injEq, List.nil]
-let xbdf8{24} : Lean.Meta.Origin := Lean.Meta.Origin.decl #[`Tree.branch.injEq, Bool.true, Bool.false]
-let xbe10{224} : Lean.Meta.SimpTheorem :=
-Lean.Meta.SimpTheorem.mk #[xbd80{112}, #[], xbdd8{32}, 1000, Bool.true, Bool.false, xbdf8{24}, Bool.false]
-let xbe48{240} : Lean.Meta.SimpEntry := Lean.Meta.SimpEntry.thm #[xbe10{224}]
-let xbe58{256} : Lean.ScopedEnvExtension.Entry Lean.Meta.SimpEntry := Lean.ScopedEnvExtension.Entry.global #[xbe48{240}]
-let xbe68{16} : Lean.Meta.SimpEntry := Lean.Meta.SimpEntry.toUnfold #[`someTree]
-let xbe78{32} : Lean.ScopedEnvExtension.Entry Lean.Meta.SimpEntry := Lean.ScopedEnvExtension.Entry.global #[xbe68{16}]
-let xbe88{832} : Array.{0} (Lean.ScopedEnvExtension.Entry Lean.Meta.SimpEntry) :=
-array 4 #[xbc68{248}, xbd58{240}, xbe58{256}, xbe78{32}]
-let xbec0{936} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
-Prod.mk #[`Lean.Meta.simpExtension, xbe88{832}]
-let xbf30{112} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
-Prod.mk #[`Lean.Meta.sevalSimpExtension, #[]]
-let xbf98{104} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.Meta.congrExtension, #[]]
-let xc020{136} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+let xbee8{104} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.Elab.Term.elabAsElim, #[]]
+let xbf48{96} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`recExt, #[]]
+let xbfb0{104} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.Meta.congrExtension, #[]]
+let xc038{136} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
 Prod.mk #[`Lean.Meta.Simp.simprocDeclExt, #[]]
-let xc090{112} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+let xc0a8{112} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
 Prod.mk #[`Lean.Meta.Simp.simprocExtension, #[]]
-let xc100{112} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+let xc118{112} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
 Prod.mk #[`Lean.Meta.Simp.simprocSEvalExtension, #[]]
-let xc1b0{176} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.Elab.WF.eqnInfoExt, #[]]
-let xc270{192} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
-Prod.mk #[`Lean.Elab.ComputedFields.computedFieldAttr, #[]]
-let xc2f8{136} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
-Prod.mk #[`Lean.Elab.Structural.eqnInfoExt, #[]]
-let xc3b0{184} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+let xc180{24} : Lean.Meta.SimpTheoremKey := Lean.Meta.DiscrTree.Key.const #[`SizeOf.sizeOf, 3]
+let xc198{24} : Lean.Meta.SimpTheoremKey := Lean.Meta.DiscrTree.Key.const #[`Tree.leaf, 0]
+let xc1b0{104} : Array.{0} Lean.Meta.SimpTheoremKey :=
+array 4 #[xc180{24}, xaaf8{24}, Lean.Meta.DiscrTree.Key.star, xc198{24}]
+let xc1e8{32} : Lean.Expr := Lean.Expr.const #[`Tree.leaf.sizeOf_spec, List.nil]
+let xc208{24} : Lean.Meta.Origin := Lean.Meta.Origin.decl #[`Tree.leaf.sizeOf_spec, Bool.true, Bool.false]
+let xc220{216} : Lean.Meta.SimpTheorem :=
+Lean.Meta.SimpTheorem.mk #[xc1b0{104}, #[], xc1e8{32}, 1000, Bool.true, Bool.false, xc208{24}, Bool.true]
+let xc258{232} : Lean.Meta.SimpEntry := Lean.Meta.SimpEntry.thm #[xc220{216}]
+let xc268{248} : Lean.ScopedEnvExtension.Entry Lean.Meta.SimpEntry := Lean.ScopedEnvExtension.Entry.global #[xc258{232}]
+let xc278{24} : Lean.Meta.SimpTheoremKey := Lean.Meta.DiscrTree.Key.const #[`Tree.branch, 2]
+let xc290{96} : Array.{0} Lean.Meta.SimpTheoremKey :=
+array 6 #[xc180{24},
+   xaaf8{24},
+   Lean.Meta.DiscrTree.Key.star,
+   xc278{24},
+   Lean.Meta.DiscrTree.Key.star,
+   Lean.Meta.DiscrTree.Key.star]
+let xc2d8{32} : Lean.Expr := Lean.Expr.const #[`Tree.branch.sizeOf_spec, List.nil]
+let xc2f8{24} : Lean.Meta.Origin := Lean.Meta.Origin.decl #[`Tree.branch.sizeOf_spec, Bool.true, Bool.false]
+let xc310{208} : Lean.Meta.SimpTheorem :=
+Lean.Meta.SimpTheorem.mk #[xc290{96}, #[], xc2d8{32}, 1000, Bool.true, Bool.false, xc2f8{24}, Bool.true]
+let xc348{224} : Lean.Meta.SimpEntry := Lean.Meta.SimpEntry.thm #[xc310{208}]
+let xc358{240} : Lean.ScopedEnvExtension.Entry Lean.Meta.SimpEntry := Lean.ScopedEnvExtension.Entry.global #[xc348{224}]
+let xc368{24} : Lean.Meta.SimpTheoremKey := Lean.Meta.DiscrTree.Key.const #[`Eq, 3]
+let xc380{112} : Array.{0} Lean.Meta.SimpTheoremKey :=
+array 8 #[xc368{24},
+   xaaf8{24},
+   xc278{24},
+   Lean.Meta.DiscrTree.Key.star,
+   Lean.Meta.DiscrTree.Key.star,
+   xc278{24},
+   Lean.Meta.DiscrTree.Key.star,
+   Lean.Meta.DiscrTree.Key.star]
+let xc3d8{32} : Lean.Expr := Lean.Expr.const #[`Tree.branch.injEq, List.nil]
+let xc3f8{24} : Lean.Meta.Origin := Lean.Meta.Origin.decl #[`Tree.branch.injEq, Bool.true, Bool.false]
+let xc410{224} : Lean.Meta.SimpTheorem :=
+Lean.Meta.SimpTheorem.mk #[xc380{112}, #[], xc3d8{32}, 1000, Bool.true, Bool.false, xc3f8{24}, Bool.false]
+let xc448{240} : Lean.Meta.SimpEntry := Lean.Meta.SimpEntry.thm #[xc410{224}]
+let xc458{256} : Lean.ScopedEnvExtension.Entry Lean.Meta.SimpEntry := Lean.ScopedEnvExtension.Entry.global #[xc448{240}]
+let xc468{16} : Lean.Meta.SimpEntry := Lean.Meta.SimpEntry.toUnfold #[`someTree]
+let xc478{32} : Lean.ScopedEnvExtension.Entry Lean.Meta.SimpEntry := Lean.ScopedEnvExtension.Entry.global #[xc468{16}]
+let xc488{832} : Array.{0} (Lean.ScopedEnvExtension.Entry Lean.Meta.SimpEntry) :=
+array 4 #[xc268{248}, xc358{240}, xc458{256}, xc478{32}]
+let xc4c0{936} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+Prod.mk #[`Lean.Meta.simpExtension, xc488{832}]
+let xc530{112} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+Prod.mk #[`Lean.Meta.sevalSimpExtension, #[]]
+let xc5e8{184} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
 Prod.mk #[`Lean.Linter.MissingDocs.missingDocsExt, #[]]
-let xc428{120} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
-Prod.mk #[`Lean.Meta.unificationHintExtension, #[]]
-let xc4a0{120} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+let xc658{32} : Array.{0} Lean.Name := array 1 #[`Tree.noConfusionType]
+let xc678{144} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+Prod.mk #[`Lean.Meta.completionBlackListExt, xc658{32}]
+let xc6e8{112} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+Prod.mk #[`Lean.Meta.recursorAttribute, #[]]
+let xc798{176} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.Elab.WF.eqnInfoExt, #[]]
+let xc858{192} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+Prod.mk #[`Lean.Elab.ComputedFields.computedFieldAttr, #[]]
+let xc8e0{136} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+Prod.mk #[`Lean.Elab.Structural.eqnInfoExt, #[]]
+let xc958{120} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
 Prod.mk #[`Lean.Linter.unusedVariablesIgnoreFnsExt, #[]]
-let xc5a8{48} : Array.{0} Lean.Name := array 3 #[`Tree.below, `Tree.ibelow, `Tree.noConfusionType]
-let xc5d8{312} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
-Prod.mk #[`Lean.Server.Completion.completionBlackListExt, xc5a8{48}]
-let xc648{112} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
-Prod.mk #[`Lean.Server.userRpcProcedures, #[]]
-let xc6b8{112} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+let xca10{184} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
 Prod.mk #[`Lean.Server.codeActionProviderExt, #[]]
-let xc768{176} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.Widget.moduleRegistry, #[]]
-let xc7d0{104} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+let xcad0{192} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+Prod.mk #[`Lean.CodeAction.holeCodeActionExt, #[]]
+let xcb40{112} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+Prod.mk #[`Lean.CodeAction.cmdCodeActionExt, #[]]
+let xcbb0{112} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+Prod.mk #[`Lean.Server.userRpcProcedures, #[]]
+let xcc60{176} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.Widget.moduleRegistry, #[]]
+let xccc8{104} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
 Prod.mk #[`Lean.Widget.panelWidgetsExt, #[]]
-let xc7e8{15432} : Array.{0} (Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry)) :=
-array 76 #[x8f08{264},
-   x8fa8{160},
-   x9030{136},
-   x9508{1240},
-   x95c8{192},
-   x9648{128},
-   x96b8{112},
-   x9770{184},
-   x97d8{104},
-   x9960{392},
-   x99d0{112},
-   x9a38{104},
-   x9b28{240},
-   x9b98{112},
-   x9c00{104},
-   x9c70{112},
-   x9ce0{112},
-   xa230{1360},
-   xa298{104},
-   xa350{184},
-   xa548{504},
-   xa5b0{104},
-   xa618{104},
-   xa6c0{168},
-   xa730{112},
-   xa818{232},
-   xa880{104},
-   xa980{256},
-   xa9f0{112},
-   xab30{320},
-   xaba8{120},
-   xac50{168},
-   xacb0{96},
-   xad18{104},
-   xadc8{176},
-   xae30{104},
-   xae98{104},
-   xaf48{176},
-   xb008{192},
-   xb080{120},
-   xb100{128},
-   xb170{112},
-   xb1e8{120},
-   xb298{176},
-   xb350{184},
-   xb408{184},
-   xb478{112},
-   xb578{256},
-   xb5b0{56},
-   xb668{184},
-   xb6c0{88},
-   xb728{104},
-   xb7e8{192},
-   xb8a0{184},
-   xb958{184},
-   xb9c8{112},
-   xba40{120},
-   xbaa8{104},
-   xbb18{112},
-   xbec0{936},
-   xbf30{112},
-   xbf98{104},
-   xc020{136},
-   xc090{112},
-   xc100{112},
-   xc1b0{176},
-   xc270{192},
-   xc2f8{136},
-   xc3b0{184},
-   xc428{120},
-   xc4a0{120},
-   xc5d8{312},
-   xc648{112},
-   xc6b8{112},
-   xc768{176},
-   xc7d0{104}]
-let xca60{51792} : Lean.ModuleData := Lean.ModuleData.mk #[xa0{128}, x870{2208}, x8cf8{33928}, x8de8{48}, xc7e8{15432}]
-xca60{51792}
-size without theorems: 42840
+let xcd78{176} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+Prod.mk #[`Lean.Elab.Tactic.Ext.extExtension, #[]]
+let xce30{184} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+Prod.mk #[`Lean.Elab.Tactic.Omega.bvOmegaSimpExtension, #[]]
+let xcee8{184} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+Prod.mk #[`Lean.Meta.NormCast.pushCastExt, #[]]
+let xcf98{176} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+Prod.mk #[`Lean.Meta.NormCast.normCastExt.up, #[]]
+let xcff8{96} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+Prod.mk #[`Lean.Meta.NormCast.normCastExt.down, #[]]
+let xd058{96} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+Prod.mk #[`Lean.Meta.NormCast.normCastExt.squash, #[]]
+let xd100{168} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.Meta.Symm.symmExt, #[]]
+let xd1a8{168} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) := Prod.mk #[`Lean.Meta.Rfl.reflExt, #[]]
+let xd220{120} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+Prod.mk #[`Lean.Meta.unificationHintExtension, #[]]
+let xd2d0{176} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+Prod.mk #[`Lean.Meta.Grind.grindNormExt, #[]]
+let xd340{112} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+Prod.mk #[`Lean.Meta.Grind.grindNormSimprocExt, #[]]
+let xd3a8{104} : Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry) :=
+Prod.mk #[`Lean.Meta.Grind.grindCasesExt, #[]]
+let xd3c0{18648} : Array.{0} (Prod.{0, 0} Lean.Name (Array.{0} Lean.EnvExtensionEntry)) :=
+array 99 #[x8f08{264},
+   x8fb8{176},
+   x9040{136},
+   x9518{1240},
+   x95d8{192},
+   x9658{128},
+   x96c8{112},
+   x9780{184},
+   x97e8{104},
+   x9970{392},
+   x99e0{112},
+   x9a50{112},
+   x9ab8{104},
+   x9ba8{240},
+   x9c18{112},
+   x9c80{104},
+   x9cf0{112},
+   x9d60{112},
+   xa2b0{1360},
+   xa318{104},
+   xa3d0{184},
+   xa5c8{504},
+   xa630{104},
+   xa698{104},
+   xa740{168},
+   xa7b0{112},
+   xa898{232},
+   xa900{104},
+   xaa00{256},
+   xaa70{112},
+   xabb0{320},
+   xac28{120},
+   xacd0{168},
+   xad30{96},
+   xada8{120},
+   xae10{104},
+   xae78{104},
+   xaf28{176},
+   xaf90{104},
+   xaff8{104},
+   xb0a8{176},
+   xb168{192},
+   xb1e0{120},
+   xb260{128},
+   xb2d0{112},
+   xb348{120},
+   xb3f8{176},
+   xb4b0{184},
+   xb518{104},
+   xb5d0{184},
+   xb640{112},
+   xb740{256},
+   xb7b0{112},
+   xb818{104},
+   xb880{104},
+   xb8e0{96},
+   xb9e0{256},
+   xba18{56},
+   xbad0{184},
+   xbb28{88},
+   xbb90{104},
+   xbc50{192},
+   xbce0{144},
+   xbd98{184},
+   xbe08{112},
+   xbe80{120},
+   xbee8{104},
+   xbf48{96},
+   xbfb0{104},
+   xc038{136},
+   xc0a8{112},
+   xc118{112},
+   xc4c0{936},
+   xc530{112},
+   xc5e8{184},
+   xc678{144},
+   xc6e8{112},
+   xc798{176},
+   xc858{192},
+   xc8e0{136},
+   xc958{120},
+   xca10{184},
+   xcad0{192},
+   xcb40{112},
+   xcbb0{112},
+   xcc60{176},
+   xccc8{104},
+   xcd78{176},
+   xce30{184},
+   xcee8{184},
+   xcf98{176},
+   xcff8{96},
+   xd058{96},
+   xd100{168},
+   xd1a8{168},
+   xd220{120},
+   xd2d0{176},
+   xd340{112},
+   xd3a8{104}]
+let xd6f0{55008} : Lean.ModuleData := Lean.ModuleData.mk #[xa0{128}, x870{2208}, x8cf8{33928}, x8de8{48}, xd3c0{18648}]
+xd6f0{55008}
+size without theorems: 46056

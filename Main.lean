@@ -16,6 +16,6 @@ def main (args : List String) : IO Unit := do
     let opts := ({} : Options)
     let mods := if mods.isEmpty then #[`Lean] else mods.toArray.map String.toName
     let env ← importModules (mods.map ({ module := · })) opts
-    let ctx : Core.Context := { fileName := "<input>", fileMap := ⟨"", #[0], #[1]⟩ }
+    let ctx : Core.Context := { fileName := "<input>", fileMap := ⟨"", #[0]⟩ }
     discard <| Core.CoreM.toIO (ctx := ctx) (s := { env }) <| Meta.MetaM.run do
       objs.main base root
