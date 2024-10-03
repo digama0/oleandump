@@ -72,8 +72,7 @@ def parseObj : OLeanParser Obj := do
       pure <| Obj.mpz (sign * nat)
     else
       let sign := if (← read8) ≠ 0 then -1 else 1
-      -- TODO(https://github.com/leanprover/lean4/pull/2908): as well as not always being zero, the
-      -- length of this padding is platform-dependent.
+      -- This padding is not always zero (https://github.com/leanprover/lean4/pull/2908)
       let padding ← readBytes 7
       let size ← read64LE
       let _limbsPtr ← read64LE
