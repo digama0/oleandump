@@ -4,13 +4,21 @@ import Qq
 open IO System Process Lean Qq
 
 def main (args : List String) : IO Unit := do
-  match args with
+  let mut new_args := []
+  let mut context : OLeanParser.Context := { useGMP := true }
+  for a in args.reverse do
+    if a = "--no-gmp" then
+      context := { context with useGMP := false }
+    else
+      new_args := a :: new_args
+
+  match new_args with
   | [] =>
     println "Usage: ... filename [mod ...]"
     exit 1
   | file :: mods =>
     let cnt ← IO.FS.readBinFile file
-    let ({ githash, base, objs, root }, _last) ← IO.ofExcept <| parseOLean.run cnt
+    let ({ githash, base, objs, root }, _last) ← IO.ofExcept <| (parseOLean.run context).run cnt
     IO.println s!"githash = {githash}"
     initSearchPath (← findSysroot)
     let opts := ({} : Options)

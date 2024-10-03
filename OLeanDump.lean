@@ -3,19 +3,25 @@ import OLeanDump.ByteArrayParser
 open IO
 open ByteArrayParser
 
+structure OLeanParser.Context where
+  /-- Whether the olean was produced using a Lean built with `LEAN_USE_GMP`. -/
+  useGMP : Bool
+
+abbrev OLeanParser := ReaderT OLeanParser.Context ByteArrayParser
+
 def ObjPtr.parse (ptr : UInt64) : ObjPtr :=
   if ptr &&& 1 = 1 then
     ObjPtr.scalar <| ptr.toNat >>> 1
   else
     ObjPtr.ptr ptr
 
-def parseArrayElems (n : Nat) : ByteArrayParser (Array ObjPtr) := do
+def parseArrayElems (n : Nat) : OLeanParser (Array ObjPtr) := do
   let mut arr := #[]
   for _i in [0:n] do
     arr := arr.push (.parse (← read64LE))
   pure <| arr
 
-def parseObj : ByteArrayParser Obj := do
+def parseObj : OLeanParser Obj := do
   let rc ← read32LE
   unless rc = 0 do panic! s!"nonpersistent object: rc={rc}"
   let cs_sz ← read16LE
@@ -48,21 +54,32 @@ def parseObj : ByteArrayParser Obj := do
     let utf8 := utf8.extract 0 (utf8.size - 1) -- drop zero terminator
     pure <| Obj.string <| String.fromUTF8! utf8 -- TODO
   | 250 =>
-    let capacity ← read32LE
-    let signSize ← read32LE
-    let (size, sign) := -- TODO: implement Int32
-      if (signSize >>> 31) == 0 then
-        (signSize, 1)
-      else
-        (0-signSize, -1)
-    unless size = capacity do
-      panic! s!"mpz has different capacity={capacity} than size={size}"
-    let _limbsPtr ← read64LE
-    -- TODO: verify that limbsPtr starts here
-    let limbs ← readArray size.toNat read64LE -- mb_limb_t
-    let nat : Nat := limbs.foldr (init := 0) -- limbs are little-endian
-      fun limb acc => (acc <<< 64) ||| limb.toNat
-    pure <| Obj.mpz (sign * nat)
+    if (← read).useGMP then
+      let capacity ← read32LE
+      let signSize ← read32LE
+      let (size, sign) := -- TODO: implement Int32
+        if (signSize >>> 31) == 0 then
+          (signSize, 1)
+        else
+          (0-signSize, -1)
+      unless size = capacity do
+        panic! s!"mpz has different capacity={capacity} than size={size}"
+      let _limbsPtr ← read64LE
+      -- TODO: verify that limbsPtr starts here
+      let limbs ← readArray size.toNat read64LE -- mb_limb_t
+      let nat : Nat := limbs.foldr (init := 0) -- limbs are little-endian
+        fun limb acc => (acc <<< 64) ||| limb.toNat
+      pure <| Obj.mpz (sign * nat)
+    else
+      let sign := if (← read8) ≠ 0 then -1 else 1
+      -- This padding is not always zero (https://github.com/leanprover/lean4/pull/2908)
+      let padding ← readBytes 7
+      let size ← read64LE
+      let _limbsPtr ← read64LE
+      let limbs ← readArray size.toNat read32LE
+      let nat : Nat := limbs.foldr (init := 0) -- limbs are little-endian
+        fun limb acc => (acc <<< 32) ||| limb.toNat
+      pure <| Obj.mpz (sign * nat) (some padding)
   | 251 =>
     let value ← read64LE
     let closure ← read64LE
@@ -99,7 +116,7 @@ structure OLeanFile where
   objs : ObjLookup
   root : ObjPtr
 
-def parseOLean : ByteArrayParser OLeanFile := do
+def parseOLean : OLeanParser OLeanFile := do
   let pos0 ← get
   expectBs "olean".toUTF8
   expectB 1 -- v1 olean

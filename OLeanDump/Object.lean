@@ -19,7 +19,8 @@ inductive Obj
   | thunk (value : ObjPtr)
   | task (value : ObjPtr)
   | ref (ref : ObjPtr)
-  | mpz (value : Int)
+  /-- When `LEAN_USE_GMP` is unset, `mpz` contains unused padding bytes. -/
+  | mpz (value : Int) (paddingBytes : Option ByteArray := none)
   deriving Inhabited
 
 def ObjLookup := Lean.HashMap UInt64 (Obj × Nat)
@@ -202,7 +203,7 @@ partial def mark : ObjPtr → StateM (RefSet × Nat) Unit
     | .ref p => mark p
     | .sarray _
     | .string _
-    | .mpz _ => pure ()
+    | .mpz _ _ => pure ()
 
 structure ReprState where
   base : UInt64
@@ -333,7 +334,8 @@ partial def parse (ptr : ObjPtr) (layout : LayoutVal := .unknown 0) : ReprM Pars
       | Obj.task v => pure <| f!"Obj.task{Format.line}{← reprCore v}"
       | Obj.ref r => pure <| f!"Obj.ref{Format.line}{← reprCore r}"
       | Obj.sarray bs => pure <| f!"Obj.sarray'{Format.line}{bs}"
-      | Obj.mpz v => pure f!"Obj.mpz{Format.line}{v}"
+      | Obj.mpz v none => pure f!"Obj.mpz{Format.line}{v}"
+      | Obj.mpz v (some padding) => pure f!"Obj.mpz{Format.line}{v}{Format.line}(padding := {padding})"
     let res := res.fill.nest 2
     modify fun st => { st with size := st.size + sz }
     let diff := (← get).size - start
