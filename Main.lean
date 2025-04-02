@@ -10,7 +10,9 @@ def main (args : List String) : IO Unit := do
     exit 1
   | file :: mods =>
     let cnt ← IO.FS.readBinFile file
-    let ({ githash, base, objs, root }, _last) ← IO.ofExcept <| parseOLean.run cnt
+    let ({ useGmp, leanVersion, githash, base, objs, root }, _last) ← IO.ofExcept <| parseOLean.run cnt
+    IO.println s!"useGmp = {useGmp}"
+    IO.println s!"leanVersion = {leanVersion}"
     IO.println s!"githash = {githash}"
     initSearchPath (← findSysroot)
     let opts := ({} : Options)

@@ -5,11 +5,11 @@
    "type": "git",
    "subDir": null,
    "scope": "",
-   "rev": "71f54425e6fe0fa75f3aef33a2813a7898392222",
+   "rev": "7597f60265ff80655d8f672c94b7577722f31868",
    "name": "Qq",
    "manifestFile": "lake-manifest.json",
    "inputRev": "master",
    "inherited": false,
-   "configFile": "lakefile.lean"}],
+   "configFile": "lakefile.toml"}],
  "name": "oleandump",
  "lakeDir": ".lake"}

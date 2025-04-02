@@ -94,6 +94,8 @@ def parseObj : ByteArrayParser Obj := do
     pure <| Obj.ctor ctor.toNat fields sfields
 
 structure OLeanFile where
+  useGmp : Bool
+  leanVersion : String
   githash : String
   base : UInt64
   objs : ObjLookup
@@ -102,9 +104,13 @@ structure OLeanFile where
 def parseOLean : ByteArrayParser OLeanFile := do
   let pos0 ← get
   expectBs "olean".toUTF8
-  expectB 1 -- v1 olean
+  expectB 2 -- v2 olean
+  let flags ← read8
+  let useGmp := flags &&& 1 == 1
+  unless useGmp do
+    panic! "USE_GMP=OFF builds not currently supported"
+  let leanVersion := String.mk <| (← readBytes 33).toList.takeWhile (· ≠ 0) |>.map (Char.ofNat ·.toNat)
   let githash := String.mk <| (← readBytes 40).toList.takeWhile (· ≠ 0) |>.map (Char.ofNat ·.toNat)
-  expectBs [0, 0].toByteArray -- reserved
   let base ← read64LE
   let mut objs : ObjLookup := {}
   let root ← read64LE
@@ -114,7 +120,7 @@ def parseOLean : ByteArrayParser OLeanFile := do
     let obj ← parseObj
     modify (·.align8)
     objs := objs.insert (base + (pos - pos0).toUInt64) (obj, (← get) - pos)
-  pure { githash, base, objs, root := .ptr root }
+  pure { useGmp, leanVersion, githash, base, objs, root := .ptr root }
 
 open Process
 

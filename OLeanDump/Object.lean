@@ -3,8 +3,8 @@ import Qq
 import OLeanDump.ByteArrayParser
 
 open Std Lean Meta ByteArrayParser Qq
-abbrev RefMap (α) := Lean.HashMap UInt64 α
-abbrev RefSet := Lean.HashSet UInt64
+abbrev RefMap (α) := Std.HashMap UInt64 α
+abbrev RefSet := Std.HashSet UInt64
 
 inductive ObjPtr
   | scalar (n : Nat)
@@ -22,8 +22,7 @@ inductive Obj
   | mpz (value : Int)
   deriving Inhabited
 
-def ObjLookup := Lean.HashMap UInt64 (Obj × Nat)
-  deriving EmptyCollection
+abbrev ObjLookup := Std.HashMap UInt64 (Obj × Nat)
 
 namespace ObjLookup
 variable (self : ObjLookup)
@@ -192,7 +191,7 @@ partial def mark : ObjPtr → StateM (RefSet × Nat) Unit
   | .ptr ptr => do
     unless keep ptr do return
     if (← get).1.contains ptr then return
-    let (o, sz) := self.find! ptr
+    let (o, sz) := self[ptr]!
     modify fun s => (s.1.insert ptr, s.2 + sz)
     match o with
     | .ctor _ fs _
@@ -244,7 +243,7 @@ partial def parse (ptr : ObjPtr) (layout : LayoutVal := .unknown 0) : ReprM Pars
   match ptr with
   | .scalar n =>
     if let some (iv, _) := iv then
-      if let some n := iv.ctors.get? n then
+      if let some n := iv.ctors[n]? then
         let layout ← getLayoutCache n
         if let .ctor _ _ #[] := layout then
           return if n == ``Name.anonymous then
@@ -253,9 +252,9 @@ partial def parse (ptr : ObjPtr) (layout : LayoutVal := .unknown 0) : ReprM Pars
             .other f!"{n}"
     pure <| .other <| repr n
   | .ptr ptr =>
-    if let some res := (← get).ids.find? ptr then return res
+    if let some res := (← get).ids[ptr]? then return res
     let start := (← get).size
-    let (o, sz) := self.find! ptr
+    let (o, sz) := self[ptr]!
     let mut parsed := none
     let res ← match o with
       | Obj.ctor idx fields sfields =>
@@ -265,7 +264,7 @@ partial def parse (ptr : ObjPtr) (layout : LayoutVal := .unknown 0) : ReprM Pars
               let ty ← whnf ty
               let .const c _ := ty.getAppFn | throwError "not inductive: {ty}"
               throwError "not inductive: {c}"
-          let some n := iv.ctors.get? idx | throwError "not inductive: {iv.name}.{idx}"
+          let some n := iv.ctors[idx]? | throwError "not inductive: {iv.name}.{idx}"
           pure (some (n, params, ← getLayoutCache n))
         catch _e =>
           -- println! "{← e.toMessageData.toString}"
@@ -290,7 +289,7 @@ partial def parse (ptr : ObjPtr) (layout : LayoutVal := .unknown 0) : ReprM Pars
             | .enum c n off =>
               runP (readNLE n) off fun idx => do
                 let iv ← getConstInfoInduct c
-                let some n := iv.ctors.get? idx.toNat | pure f!"??? {c}.{idx}"
+                let some n := iv.ctors[idx.toNat]? | pure f!"??? {c}.{idx}"
                 pure f!"{n}"
             | .other c i =>
               let e ← instantiateLambda c params
