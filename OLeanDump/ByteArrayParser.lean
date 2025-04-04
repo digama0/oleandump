@@ -20,7 +20,7 @@ def peek : ByteArrayParser UInt8 := do
   let ba ← read
   let pos ← get
   if h : pos < ba.size then
-    pure <| ba.get ⟨pos, h⟩
+    pure <| ba[pos]
   else
     throw "eof"
 
